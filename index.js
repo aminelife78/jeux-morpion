@@ -11,9 +11,9 @@ let joueur1;
 let joueur2;
 
 // sauvgarde les prenoms des joueurs deans localstorige
-if (localStorage.length > 0) {
-  players1.value = localStorage.name1;
-  players2.value = localStorage.name2;
+if (sessionStorage.length > 0) {
+  players1.value = sessionStorage.name1;
+  players2.value = sessionStorage.name2;
 }
 let player = "X";
 let enCour = true;
@@ -26,8 +26,8 @@ plays.addEventListener("click", () => {
     play.style.display = "none";
     player1.innerHTML = `Au tour de ${players1.value} (X)`;
     player2.innerHTML = `Au tour de ${players2.value} (O)`;
-    localStorage.setItem("name1", joueur1);
-    localStorage.setItem("name2", joueur2);
+    sessionStorage.setItem("name1", joueur1);
+    sessionStorage.setItem("name2", joueur2);
   } else {
     location.reload();
   }
