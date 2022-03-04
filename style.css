@@ -3,22 +3,36 @@
   margin: 0;
   padding: 0;
 }
-
+.title{
+  margin-bottom: 200px ;
+  font-weight: 700;
+  padding: 20px 10px;
+  color: #0A369D;
+  font-size: 40px;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #2C6E49;
+  
+}
 .play{
   width: 100%;
   height: 100vh;
-  background-color: #67595E;
-  text-align: center;
-  padding-top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 150px;
+  background-color: #BFD0E0;
+  
   font-size: 30px;
 }
 .play p{
   padding-bottom: 30px;
+  
 }
 .play label{
   font-size: 22px;
 }
-.goo{
+.btn{
   margin-top: 30px;
   width: 120px;
   height: 50px;
@@ -27,6 +41,7 @@
   border-radius: 10px;
   cursor: pointer;
   font-size: 20px;
+  border: 2px solid #2C6E49;
 }
 .goo:hover{
   background-color: #2C6E49;
@@ -34,15 +49,17 @@
 }
 #player1,#player2{
  padding: 10px;
- font-size: 18px;
+ font-size: 16px;
  height: 40px;
  width: 250px;
  margin-right: 20px;
+ outline: none;
+ border: 0;
 }
 .container{
   width: 100%;
   height: 100vh;
-  background-color: #EED6D3;
+  background-color: #C9F9FF;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,13 +89,18 @@ body{
   .card {
     width: 100px;
     height: 100px;
-     background-color:#E8B4B8;
-     border: 5px solid #67595E;
+     background-color:#fff;
+     color: #0A369D;
+     border: 5px solid #475657;
      text-align: center;
      font-size: 50px;
-     font-weight: 500;
+     font-weight: 700;
      line-height: 100px;
      }
+
+  .card:hover{
+    background-color: #000;
+  }
 
 
 .playrs{
@@ -90,20 +112,31 @@ body{
 }
 .player1,.player2{
   padding: 20px ;
-  font-weight: 600;
   font-size: 20px;
   text-align: center;
 }
 
 .changePlayers{
-  background-color: #A49393;
+  background-color: #6691F5;
   border-radius: 10px;
+  font-weight: 600;
 }
 .victoir{
   background-color: #5DAC7F;
+  
 }
 .result{
   margin-top: 20px;
   font-size: 20px;
   color: #333;
 }
+
+.replay{
+  background-color: #5DAC7F;
+  font-size: 25px;
+  color: white;
+  border: 0;
+  width: 150px;
+}
+
+
