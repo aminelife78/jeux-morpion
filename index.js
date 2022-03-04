@@ -105,4 +105,5 @@ cards.forEach((card) => {
 
 rejouer.addEventListener("click", () => {
   window.location.reload();
+  play.style.display = "block";
 });
