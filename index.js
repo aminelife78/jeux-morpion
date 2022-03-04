@@ -7,6 +7,8 @@ const plays = document.querySelector(".goo");
 const players1 = document.querySelector("#player1");
 const players2 = document.querySelector("#player2");
 const rejouer = document.querySelector(".replay");
+let tabResult = []
+console.log(tabResult)
 let joueur1;
 let joueur2;
 
@@ -74,6 +76,7 @@ function verifier(card) {
       : (player2.style.background = "#5DAC7F");
     enCour = false;
   } else {
+    
     changePlayer();
   }
 }
@@ -96,7 +99,14 @@ cards.forEach((card) => {
   card.addEventListener("click", () => {
     if (card.innerHTML == "" && enCour == true) {
       card.innerHTML = player;
+      let monResult = card.innerHTML
+      tabResult.push(monResult)
+      if(tabResult.length == 9){
+        enCour = false;
+        result.innerHTML ="fin de jeu, match nul"
+      }
       verifier(card);
+      
     }
   });
 });
